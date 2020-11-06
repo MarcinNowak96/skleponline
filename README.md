@@ -6,9 +6,9 @@ Additionally, the program has the function of adding another record to the table
 This site is to become an online store in the future.
 ## Technologies
 Project is created with:
-* PHP 7.4.11 
-* Laravel 4.0.5
-* Bootstrap v4.x
+* PHP 7.3.x
+* Laravel 4.x
+* Bootstrap 4.x
 ## Setup
 If you want to run this program, create a new database called "skleponline" on your server.
 Then configure the .env file accordingly:
