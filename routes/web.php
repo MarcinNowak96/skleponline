@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('', 'HomeController@index')->name('home.index');
+Route::get('/category{category}', 'CategoryController@index')->name('category.index');
+Route::get('/product{product}', 'ProductController@index')->name('product.index');
+Route::get('/create', 'HomeController@create')->name('home.create');
+Route::get('/store', 'HomeController@store')->name('home.store');
+Route::get('/delete{product}', 'HomeController@delete')->name('home.delete');
+
