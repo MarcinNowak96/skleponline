@@ -162,11 +162,11 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
+
         /*
          * Package Service Providers...
          */
-
+        Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
         /*
          * Application Service Providers...
          */

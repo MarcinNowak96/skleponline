@@ -13,12 +13,19 @@ use Kyslik\ColumnSortable\Sortable;
  * @method static where(string $string)
  * @method static select(string $string)
  * @method static sortable()
+ * @method static findOrFail($id)
  * @property mixed id
+ * @property string image
  */
 class Product extends Model
 {
     use Sortable;
 
-    protected $fillable = ['name', 'description', 'id_category', 'price','vat'];
-    public $sortable = ['id', 'name', 'details', 'created_at', 'updated_at'];
+    protected $fillable = ['name', 'description', 'id_category', 'price','brutto','image'];
+    public $sortable = ['created_at', 'brutto'];
+
+
+    public function categories(){
+        return $this->hasOne(Categories::class);
+    }
 }

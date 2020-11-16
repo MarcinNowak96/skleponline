@@ -11,7 +11,7 @@ class ProductController extends Controller
     public function index(Product $product)
     {
         $categories = Categories::all();
-        $product = Product::find($product->id);
+        $product = Product::findOrFail($product->id);
         if ($product){
             return view('product', compact('product','categories'));
         }

@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('id_category');
             $table->integer('price');
             $table->double('brutto');
+            $table->mediumText('image')->nullable();
             $table->timestamps();
         });
     }
